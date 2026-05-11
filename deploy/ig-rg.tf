@@ -9,3 +9,8 @@ resource "aws_route_table" "cmtr-66o53piv-01-rt" {
     gateway_id = aws_internet_gateway.cmtr-66o53piv-01-igw.id
   }
 }
+
+resource "aws_route_table_association" "cmtr-66o53piv-01-rtassc" {
+  gateway_id     = aws_internet_gateway.cmtr-66o53piv-01-igw.id
+  route_table_id = aws_route_table.cmtr-66o53piv-01-rt.id
+}
