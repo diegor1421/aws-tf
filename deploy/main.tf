@@ -7,6 +7,9 @@ provider "aws" {
 
 resource "aws_internet_gateway" "cmtr-66o53piv-01-igw" {
   vpc_id = aws_vpc.cmtr-66o53piv-01-vpc.id
+  tags = {
+    Name = "cmtr-66o53piv-01-igw"
+  }
 }
 
 resource "aws_route_table" "cmtr-66o53piv-01-rt" {
@@ -14,5 +17,8 @@ resource "aws_route_table" "cmtr-66o53piv-01-rt" {
   route {
     cidr_block = "0.0.0.0/0"
     gateway_id = aws_internet_gateway.cmtr-66o53piv-01-igw.id
+  }
+  tags = {
+    Name = "cmtr-66o53piv-01-rt"
   }
 }
