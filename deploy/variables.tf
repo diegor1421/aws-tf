@@ -12,6 +12,7 @@ variable "vpc_cidr" {
 
 variable "subnets_config" {
   type = map(string)
+description = "VPC AZ Subnets CIDR Blocks"
   default = {
     az-a = "10.10.1.0/24"
     az-b = "10.10.3.0/24"
