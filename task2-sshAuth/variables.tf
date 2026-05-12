@@ -5,14 +5,17 @@ variable "aws_region" {
 
 variable "ssh_key" {
   description = "Provides custom public SSH key."
+  type        = string
 }
 
 variable "aws_keypair_name" {
   description = "Name for the SSH Key pair"
+  type        = string
 }
 
 variable "aws_instance_name" {
   description = "Ec2 Instance name"
+  type        = string
 }
 
 variable "local_tags" {
