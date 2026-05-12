@@ -21,8 +21,4 @@ variable "aws_instance_name" {
 variable "local_tags" {
   description = "local resource tags"
   type        = map(string)
-  default = {
-    Project = "epam-tf-lab"
-    ID      = "cmtr-66o53piv"
-  }
 }
